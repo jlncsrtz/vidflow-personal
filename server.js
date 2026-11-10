@@ -6,7 +6,7 @@ const os = require('node:os');
 const { spawn, spawnSync } = require('node:child_process');
 const { randomUUID } = require('node:crypto');
 
-const HOST = '127.0.0.1';
+const HOST = process.env.HOST || '0.0.0.0';
 const PORT = Number(process.env.PORT || 4317);
 const OUT_DIR = path.join(os.homedir(), 'Downloads', 'VidFlow');
 const jobs = new Map();
