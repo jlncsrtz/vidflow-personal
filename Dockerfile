@@ -10,4 +10,5 @@ ENV PATH="/root/.deno/bin:${PATH}"
 
 WORKDIR /app
 COPY . .
+ENV HOST=0.0.0.0
 CMD ["npm", "start"]
